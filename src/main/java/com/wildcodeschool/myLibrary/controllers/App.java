@@ -10,7 +10,7 @@ public class App {
 
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath*:applicationContext.xml");
 		
-		Book myBook = context.getBean("scienceFictionId", Book.class);
+		Book myBook = context.getBean("fantasyBookId", Book.class);
 		
 		context.close();
 		

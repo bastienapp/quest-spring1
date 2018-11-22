@@ -6,12 +6,11 @@ import org.springframework.stereotype.Component;
 
 @Component("fantasyBookId")
 public class FantasyBook implements Book {
-
-	@Autowired
-	@Qualifier("adventurousDrinkAdvice")
+	
 	private DrinkAdviceInterface drinkAdvice;
 	
-	public FantasyBook(DrinkAdviceInterface theDrinkAdvice) {
+	@Autowired
+	public FantasyBook(@Qualifier("cosyDrinkAdvice") DrinkAdviceInterface theDrinkAdvice) {
 		drinkAdvice = theDrinkAdvice;
 	}
 	

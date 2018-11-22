@@ -7,11 +7,10 @@ import org.springframework.stereotype.Component;
 @Component("scienceFictionId")
 public class ScienceFictionBook implements Book {
 
-	@Autowired
-	@Qualifier("adventurousDrinkAdvice")
 	private DrinkAdviceInterface drinkAdvice;
 	
-	public ScienceFictionBook(DrinkAdviceInterface theDrinkAdvice) {
+	@Autowired
+	public ScienceFictionBook(@Qualifier("adventurousDrinkAdvice") DrinkAdviceInterface theDrinkAdvice) {
 		drinkAdvice = theDrinkAdvice;
 	}
 	
